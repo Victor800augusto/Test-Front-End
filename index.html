@@ -5,10 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Test-Front-End</title>
     <link rel="stylesheet" href="./style.css" />
-  </head>
+    <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
   <body>
-    <h1>Test-front-end</h1>
-
+    <form action="#" id="form">
+    <label class="mdc-text-field mdc-text-field--filled">
+      <span class="mdc-text-field__ripple"></span>
+      <span class="mdc-floating-label" id="my-label">Nome</span>
+      <input type="text" class="mdc-text-field__input nameForm" aria-labelledby="my-label">
+      <span class="mdc-line-ripple"></span>
+    </label>
+    <label class="mdc-text-field mdc-text-field--filled">
+      <span class="mdc-text-field__ripple"></span>
+      <span class="mdc-floating-label" id="my-label">CPF</span>
+      <input type="text" class="mdc-text-field__input CPFForm" aria-labelledby="my-label">
+      <span class="mdc-line-ripple"></span>
+    </label>
+    <label class="mdc-text-field mdc-text-field--filled">
+      <span class="mdc-text-field__ripple"></span>
+      <span class="mdc-floating-label" id="my-label">Telefone</span>
+      <input type="text" class="mdc-text-field__input PhoneForm" aria-labelledby="my-label">
+      <span class="mdc-line-ripple"></span>
+    </label>
+    <label class="mdc-text-field mdc-text-field--filled">
+      <span class="mdc-text-field__ripple"></span>
+      <span class="mdc-floating-label" id="my-label">Email</span>
+      <input type="text" class="mdc-text-field__input EmailForm" aria-labelledby="my-label">
+      <span class="mdc-line-ripple"></span>
+    </label>
+    <button class="mdc-button mdc-button--raised">  
+      <span class="mdc-button__ripple"></span> Learn More
+    </button>
+    </form>
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     <script src="./app.js"></script>
   </body>
 </html>
