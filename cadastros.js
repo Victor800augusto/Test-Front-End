@@ -1,8 +1,11 @@
 const table = document.getElementById("tableCadastros");
 const tableBody = document.getElementById("tableBody");
 
-for (var i = 0; i < localStorage.length; i++) {
-  const data = JSON.parse(localStorage.getItem(localStorage.key(i)));
+let listData = JSON.parse(localStorage.getItem("localData"));
+
+for (var i = 0; i < listData.length; i++) {
+  const data = listData[i];
+
   const row = tableBody.insertRow();
 
   row.classList.add("mdc-data-table__row");
@@ -14,14 +17,13 @@ for (var i = 0; i < localStorage.length; i++) {
   cellTelefone.classList.add("mdc-data-table__cell");
   const cellEmail = row.insertCell();
   cellEmail.classList.add("mdc-data-table__cell");
-
   const cellDelete = row.insertCell();
   cellDelete.classList.add("mdc-data-table__cell");
   cellDelete.classList.add("deleteItem");
 
-  cellNome.innerHTML = data.nome;
+  cellNome.innerHTML = data.name;
   cellCPF.innerHTML = data.cpf;
-  cellTelefone.innerHTML = data.tel;
+  cellTelefone.innerHTML = data.phone;
   cellEmail.innerHTML = data.email;
 
   const deleteHtml = `<span class="material-icons IconDelete" onclick="deletarItem()">delete</span>`;
