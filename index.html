@@ -7,36 +7,41 @@
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
   <body>
-    <form action="#" id="form">
+    <form action="cadastros.html" id="form">
     <label class="mdc-text-field mdc-text-field--filled">
       <span class="mdc-text-field__ripple"></span>
       <span class="mdc-floating-label" id="my-label">Nome</span>
-      <input type="text" class="mdc-text-field__input nameForm" aria-labelledby="my-label">
+      <input type="text" class="mdc-text-field__input nameForm" aria-labelledby="my-label" required
+       name="name">
       <span class="mdc-line-ripple"></span>
     </label>
     <label class="mdc-text-field mdc-text-field--filled">
       <span class="mdc-text-field__ripple"></span>
       <span class="mdc-floating-label" id="my-label">CPF</span>
-      <input type="text" class="mdc-text-field__input CPFForm" aria-labelledby="my-label">
+      <input type="number" class="mdc-text-field__input CPFForm" aria-labelledby="my-label" required 
+      maxlength="11" name="cpf">
       <span class="mdc-line-ripple"></span>
     </label>
     <label class="mdc-text-field mdc-text-field--filled">
       <span class="mdc-text-field__ripple"></span>
       <span class="mdc-floating-label" id="my-label">Telefone</span>
-      <input type="text" class="mdc-text-field__input PhoneForm" aria-labelledby="my-label">
+      <input type="tel" class="mdc-text-field__input PhoneForm" aria-labelledby="my-label" required
+       name="telefone">
       <span class="mdc-line-ripple"></span>
     </label>
     <label class="mdc-text-field mdc-text-field--filled">
       <span class="mdc-text-field__ripple"></span>
       <span class="mdc-floating-label" id="my-label">Email</span>
-      <input type="text" class="mdc-text-field__input EmailForm" aria-labelledby="my-label">
+      <input type="email" class="mdc-text-field__input EmailForm" aria-labelledby="my-label" required
+       name="email">
       <span class="mdc-line-ripple"></span>
     </label>
     <button class="mdc-button mdc-button--raised">  
-      <span class="mdc-button__ripple"></span> Learn More
+      <span class="mdc-button__ripple"></span> Cadastrar
     </button>
     </form>
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     <script src="./app.js"></script>
+    <script src="./index.js"></script>
   </body>
 </html>
