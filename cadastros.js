@@ -1,4 +1,4 @@
-// const table = document.getElementById("tableCadastros");
+const table = document.getElementById("tableCadastros");
 const tableBody = document.getElementById("tableBody");
 
 for (var i = 0; i < localStorage.length; i++) {
@@ -24,6 +24,11 @@ for (var i = 0; i < localStorage.length; i++) {
   cellTelefone.innerHTML = data.tel;
   cellEmail.innerHTML = data.email;
 
-  const deleteHtml = `<i class="material-icons IconDelete onclick="test()">delete</i>`;
+  const deleteHtml = `<span class="material-icons IconDelete" onclick="deletarItem()">delete</span>`;
   cellDelete.innerHTML = deleteHtml;
 }
+
+const deletarItem = () => {
+  console.log(table.rows.length);
+  console.log(this.parent);
+};
