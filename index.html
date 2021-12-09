@@ -5,44 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Test-Front-End</title>
     <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css"
+    />
+  </head>
   <body>
-    <form action="#" id="form" >
-    <label class="mdc-text-field mdc-text-field--filled">
-      <span class="mdc-text-field__ripple"></span>
-      <span class="mdc-floating-label" id="my-label">Nome</span>
-      <input type="text" class="mdc-text-field__input" id="inputNameForm" aria-labelledby="my-label" required
-       name="name">
-      <span class="mdc-line-ripple"></span>
-    </label>
-    <label class="mdc-text-field mdc-text-field--filled">
-      <span class="mdc-text-field__ripple"></span>
-      <span class="mdc-floating-label" id="my-label">CPF</span>
-      <input type="text" class="mdc-text-field__input" id="inputCPFForm" aria-labelledby="my-label" required 
-      maxlength="11" name="cpf">
-      <span class="mdc-line-ripple"></span>
-    </label>
-    <label class="mdc-text-field mdc-text-field--filled">
-      <span class="mdc-text-field__ripple"></span>
-      <span class="mdc-floating-label" id="my-label">Telefone</span>
-      <input type="tel" class="mdc-text-field__input" id="inputTelForm" aria-labelledby="my-label" required
-      maxlength="12" name="telefone">
-      <span class="mdc-line-ripple"></span>
-    </label>
-    <label class="mdc-text-field mdc-text-field--filled">
-      <span class="mdc-text-field__ripple"></span>
-      <span class="mdc-floating-label" id="my-label">Email</span>
-      <input type="email" class="mdc-text-field__input" id="inputEmailForm" aria-labelledby="my-label" required
-       name="email">
-      <span class="mdc-line-ripple"></span>
-    </label>
-    <button class="mdc-button mdc-button--raised" id="btnCadastro">  
-      <span class="mdc-button__ripple"></span> Cadastrar
-    </button>
-    <a href="cadastros.html" class="mdc-button mdc-button--raised" id="btnVisualizarLista">  
-      <span class="mdc-button__ripple"></span> Visualizar Cadastros
-    </a>
-    </form>
+    <div class="containerCadastro">
+      <form action="#" id="form">
+        <label class="mdc-text-field mdc-text-field--filled">
+          <span class="mdc-text-field__ripple"></span>
+          <span class="mdc-floating-label" id="my-label">Nome</span>
+          <input
+            type="text"
+            class="mdc-text-field__input"
+            id="inputNameForm"
+            aria-labelledby="my-label"
+            required
+            name="name"
+          />
+          <span class="mdc-line-ripple"></span>
+        </label>
+        <label class="mdc-text-field mdc-text-field--filled">
+          <span class="mdc-text-field__ripple"></span>
+          <span class="mdc-floating-label" id="my-label">CPF</span>
+          <input
+            type="text"
+            class="mdc-text-field__input"
+            id="inputCPFForm"
+            aria-labelledby="my-label"
+            required
+            maxlength="11"
+            name="cpf"
+          />
+          <span class="mdc-line-ripple"></span>
+        </label>
+        <label class="mdc-text-field mdc-text-field--filled">
+          <span class="mdc-text-field__ripple"></span>
+          <span class="mdc-floating-label" id="my-label">Telefone</span>
+          <input
+            type="tel"
+            class="mdc-text-field__input"
+            id="inputTelForm"
+            aria-labelledby="my-label"
+            required
+            maxlength="12"
+            name="telefone"
+          />
+          <span class="mdc-line-ripple"></span>
+        </label>
+        <label class="mdc-text-field mdc-text-field--filled">
+          <span class="mdc-text-field__ripple"></span>
+          <span class="mdc-floating-label" id="my-label">Email</span>
+          <input
+            type="email"
+            class="mdc-text-field__input"
+            id="inputEmailForm"
+            aria-labelledby="my-label"
+            required
+            name="email"
+          />
+          <span class="mdc-line-ripple"></span>
+        </label>
+        <button class="mdc-button mdc-button--raised" id="btnCadastro">
+          <span class="mdc-button__ripple"></span> Cadastrar
+        </button>
+        <a
+          href="cadastros.html"
+          class="mdc-button mdc-button--raised"
+          id="btnVisualizarLista"
+        >
+          <span class="mdc-button__ripple"></span> Visualizar Cadastros
+        </a>
+      </form>
+    </div>
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     <script src="./app.js"></script>
     <script src="./index.js"></script>

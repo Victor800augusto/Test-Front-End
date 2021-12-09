@@ -26,11 +26,17 @@ for (var i = 0; i < listData.length; i++) {
   cellTelefone.innerHTML = data.phone;
   cellEmail.innerHTML = data.email;
 
-  const deleteHtml = `<span class="material-icons IconDelete" onclick="deletarItem()">delete</span>`;
+  const deleteHtml = `<span class="material-icons IconDelete" id="deleteId${i}" onclick="deletarItem(${i})">delete</span>`;
   cellDelete.innerHTML = deleteHtml;
 }
 
-const deletarItem = () => {
-  console.log(table.rows.length);
-  console.log(this.parent);
+const deletarItem = (id) => {
+  let isExecuted = confirm("Deseja deletar este item?");
+  if (isExecuted) {
+    listData.splice(id, 1);
+    localStorage.setItem("localData", JSON.stringify(listData));
+    document.location.reload(true);
+  } else {
+    console.log("false");
+  }
 };
