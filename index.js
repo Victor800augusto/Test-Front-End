@@ -5,18 +5,56 @@ const inputCPF = document.getElementById("inputCPFForm");
 const inputTelefone = document.getElementById("inputTelForm");
 const inputEmail = document.getElementById("inputEmailForm");
 
+let listCadastros = [];
+
+const init = () => {
+  getData();
+  if (listCadastros.length == 0) {
+    listCadastros = [
+      {
+        cpf: "04080757247",
+        name: "José Andrade",
+        email: "jose@test.com.br",
+        phone: "11987654321",
+      },
+      {
+        cpf: "77797584192",
+        name: "Manoel Silva",
+        email: "manoel@test.com.br",
+        phone: "11987654321",
+      },
+      {
+        cpf: "45486737688",
+        name: "Augusto Maier",
+        email: "augusto@test.com.br",
+        phone: "11987654321",
+      },
+    ];
+    localStorage.setItem("localData", JSON.stringify(listCadastros));
+  }
+};
+
+const addData = () => {
+  getData();
+  listCadastros.push({
+    cpf: form.elements[1].value,
+    name: form.elements[0].value,
+    email: form.elements[3].value,
+    phone: form.elements[2].value,
+  });
+  localStorage.setItem("localData", JSON.stringify(listCadastros));
+};
+
+function getData() {
+  const str = localStorage.getItem("localData");
+  if (str != null) {
+    listCadastros = JSON.parse(str);
+  }
+}
+
 const cadastro = (e) => {
   e.preventDefault();
-
-  localStorage.setItem(
-    localStorage.length + 1,
-    JSON.stringify({
-      nome: form.elements[0].value,
-      cpf: form.elements[1].value,
-      tel: form.elements[2].value,
-      email: form.elements[3].value,
-    })
-  );
+  addData();
   form.reset();
 };
 
@@ -49,3 +87,5 @@ function verificarInputEmail(e) {
     e.preventDefault();
   }
 }
+
+window.addEventListener("load", init());
