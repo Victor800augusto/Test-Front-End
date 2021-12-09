@@ -47,10 +47,6 @@
   cursor: pointer;
 }
 
-.deleteItem {
-  text-align: center;
-}
-
 #btnVoltar {
   text-align: center;
   margin: 24px auto 0 auto;

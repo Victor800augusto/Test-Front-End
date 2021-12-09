@@ -7,7 +7,7 @@ const inputEmail = document.getElementById("inputEmailForm");
 
 let listCadastros = [];
 
-const init = () => {
+window.addEventListener("load", () => {
   getData();
   if (listCadastros.length == 0) {
     listCadastros = [
@@ -32,7 +32,7 @@ const init = () => {
     ];
     localStorage.setItem("localData", JSON.stringify(listCadastros));
   }
-};
+});
 
 const addData = () => {
   getData();
@@ -56,6 +56,7 @@ const cadastro = (e) => {
   e.preventDefault();
   addData();
   form.reset();
+  inputName.focus();
 };
 
 form.addEventListener("submit", cadastro, true);
@@ -66,6 +67,19 @@ function verificarInputNome(e) {
   const format = /[A-z ]/g;
   if (!format.test(e.key)) {
     e.preventDefault();
+  }
+  if (inputName.value.trim() == "" && e.key == " ") {
+    e.preventDefault();
+  }
+}
+
+inputName.addEventListener("focusout", limparEspacos);
+
+function limparEspacos() {
+  if (inputName.value.trim() == "") {
+    inputName.value = "";
+  } else {
+    inputName.value = inputName.value.trim();
   }
 }
 
@@ -87,5 +101,3 @@ function verificarInputEmail(e) {
     e.preventDefault();
   }
 }
-
-window.addEventListener("load", init());
