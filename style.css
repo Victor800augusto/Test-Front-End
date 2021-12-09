@@ -43,8 +43,13 @@
   margin: 0 auto;
 }
 
-.IconDelete:hover {
+.IconDelete:hover,
+.IconEdit:hover {
   cursor: pointer;
+}
+
+.IconEdit {
+  margin-left: 6px;
 }
 
 #btnVoltar {
