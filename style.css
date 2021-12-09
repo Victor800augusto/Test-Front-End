@@ -14,3 +14,20 @@
 .mdc-button {
   max-width: 200px;
 }
+
+#btnVisualizarLista {
+  margin-top: 24px;
+  text-align: center;
+}
+
+#btnVoltar {
+  margin-bottom: 24px;
+}
+
+.deleteItem {
+  text-align: center;
+}
+
+.IconDelete:hover {
+  cursor: pointer;
+}

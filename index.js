@@ -8,7 +8,7 @@ const cadastro = (e) => {
   localStorage.setItem(
     localStorage.length + 1,
     JSON.stringify({
-      name: form.elements[0].value,
+      nome: form.elements[0].value,
       cpf: form.elements[1].value,
       tel: form.elements[2].value,
       email: form.elements[3].value,
