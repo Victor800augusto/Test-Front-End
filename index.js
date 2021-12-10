@@ -68,25 +68,25 @@ function verificarInputNome(e) {
   if (!format.test(e.key)) {
     e.preventDefault();
   }
-  if (inputName.value.trim() == "" && e.key == " ") {
+  if (e.path[0].value.trim() == "" && e.key == " ") {
     e.preventDefault();
   }
 }
 
 inputName.addEventListener("focusout", limparEspacos);
 
-function limparEspacos() {
-  if (inputName.value.trim() == "") {
-    inputName.value = "";
+function limparEspacos(e) {
+  if (e.path[0].value.trim() == "") {
+    e.path[0].value = "";
   } else {
-    inputName.value = inputName.value.trim();
+    e.path[0].value = e.path[0].value.trim();
   }
 }
 
-inputCPF.addEventListener("keypress", verificarInputCPF);
-inputTelefone.addEventListener("keypress", verificarInputCPF);
+inputCPF.addEventListener("keypress", verificarInputNumero);
+inputTelefone.addEventListener("keypress", verificarInputNumero);
 
-function verificarInputCPF(e) {
+function verificarInputNumero(e) {
   const format = /[0-9]/g;
   if (!format.test(e.key)) {
     e.preventDefault();
