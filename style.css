@@ -56,3 +56,11 @@
   text-align: center;
   margin: 24px auto 0 auto;
 }
+
+.inputEdit {
+  font-size: 0.875rem;
+}
+
+.inputEdit:focus {
+  outline: 1px solid #6200ee;
+}

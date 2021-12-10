@@ -54,14 +54,14 @@ const editarItem = (id) => {
   let email = document.getElementById(`email${id}`);
 
   if (editIcon.innerHTML == "mode_edit") {
-    nome.innerHTML = `<input type="text" value="${nome.innerHTML}"></input>`;
+    nome.innerHTML = `<input type="text" class="inputEdit" value="${nome.innerHTML}"></input>`;
     nome.firstChild.addEventListener("keypress", verificarInputNome);
     nome.firstChild.addEventListener("focusout", limparEspacos);
-    cpf.innerHTML = `<input type="text" maxlength="11" value="${cpf.innerHTML}"></input>`;
+    cpf.innerHTML = `<input type="text" class="inputEdit" maxlength="11" value="${cpf.innerHTML}"></input>`;
     cpf.firstChild.addEventListener("keypress", verificarInputNumero);
-    tel.innerHTML = `<input type="tel" maxlength="12" value="${tel.innerHTML}"></input>`;
+    tel.innerHTML = `<input type="tel" class="inputEdit" maxlength="12" value="${tel.innerHTML}"></input>`;
     tel.firstChild.addEventListener("keypress", verificarInputNumero);
-    email.innerHTML = `<input type="email" value="${email.innerHTML}"></input>`;
+    email.innerHTML = `<input type="email" class="inputEdit" value="${email.innerHTML}"></input>`;
     email.firstChild.addEventListener("keypress", verificarInputEmail);
     editIcon.innerHTML = "save_as";
   } else {
